@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dip"
+    android:paddingRight="20dip"
+    android:paddingTop="20dip"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/centre_str"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/centre_number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dip"
+        android:background="@drawable/selector_edit"
+        android:digits="@string/input_number"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:singleLine="true" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="@string/centre_help"
+        android:textColor="@color/red"
+        android:textSize="14sp"
+        />
+
+</LinearLayout>

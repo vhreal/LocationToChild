@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.locationtochild.ui"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.locationtochild.ui.widget.TopTitleBar
+        android:id="@+id/title_setting_teleqq"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        custom:leftSrc="@drawable/ic_titlebar_back"
+        custom:titleText="@string/tele_qq_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="21dip"
+        android:layout_marginRight="21dip"
+        android:layout_marginTop="21dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_frame_edit"
+            android:orientation="vertical"
+            android:padding="7dip" >
+
+            <EditText
+                android:id="@+id/setting_teleqq_one"
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:background="@null"
+                android:hint="@string/setting_teleqq_new1"
+                android:textColor="@color/text_color"
+                android:inputType="number"
+                android:maxLength="11"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_margin="2dip"
+                android:background="#8B8682" />
+
+            <EditText
+                android:id="@+id/setting_teleqq_two"
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:background="@null"
+                android:hint="@string/setting_teleqq_new2"
+                android:textColor="@color/text_color"
+                android:inputType="number"
+                android:maxLength="11"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_margin="2dip"
+                android:background="#8B8682" />
+
+            <EditText
+                android:id="@+id/setting_teleqq_three"
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:background="@null"
+                android:hint="@string/setting_teleqq_new3"
+                android:textColor="@color/text_color"
+                android:maxLength="11"
+                android:inputType="number"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/setting_teleqq_submit"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_marginTop="14dip"
+            android:background="@drawable/button_select"
+            android:text="@string/setting_submit"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.locationtochild.ui"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <com.locationtochild.ui.widget.TopTitleBar
+        android:id="@+id/title_sync"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        custom:titleText="@string/title_sync" />
+
+    <LinearLayout
+        android:id="@+id/sync_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_sync"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/sync_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/sync_btn"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/selector_green_btn"
+            android:text="@string/sync_again"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+        
+    </LinearLayout>
+
+</RelativeLayout>

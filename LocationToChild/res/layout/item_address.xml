@@ -1,0 +1,84 @@
+<LinearLayout	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical">
+        
+        <View 
+            android:layout_width="4px"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dip"
+            android:background="@color/lighter_gray"/>
+        
+        <ImageView 
+            style="@style/moment_small_dot"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:background="@drawable/bg_moment_dot"
+            android:src="@drawable/moment_dot_colored"
+            android:contentDescription="@null"
+            android:layout_centerVertical="true"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+        android:layout_marginBottom="2dip"
+        android:paddingLeft="14dip"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/address_msg_text"
+       >
+        
+        <ImageView
+            android:id="@+id/ic_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="4dip"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_target"/>
+        
+        <TextView
+            android:id="@+id/address_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ic_location"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@id/ic_location"
+            android:layout_marginLeft="4dip"
+            android:textColor="@color/dark_blue"
+            android:textSize="15sp"/>
+        
+        <TextView 
+            android:id="@+id/address_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/address_text"
+            android:layout_marginTop="4dip"
+            android:layout_marginLeft="4dip"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/black"
+            android:textSize = "14sp"/>
+        
+        <TextView
+            android:id="@+id/go_map_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/go_map_string"
+            android:textColor="@color/selector_map_text"
+            android:textSize="16sp"
+            android:layout_gravity="right"
+            android:visibility="gone"/>
+        
+    </RelativeLayout>
+    
+    
+</LinearLayout>

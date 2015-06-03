@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.locationtochild.ui.widget.AnimationTabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/anim_tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <!-- 此处需用指定的id, 属于tab的容器 -->
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <!-- 此处需用指定的id, 在这里隐藏，采用TabHost+RadioGroup实现，所以隐藏它 -->
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" >
+
+            <View
+                android:id="@+id/main_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_alignParentTop="true"
+                android:background="@color/lighter_gray" />
+
+            <RadioGroup
+                android:id="@+id/main_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_line"
+                android:layout_gravity="bottom"
+                android:paddingTop="4dip"
+                android:paddingBottom="2dip"
+                android:background="@color/black"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_home"
+                    style="@style/main_tab_bottom"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/selector_tab_home"
+                    android:text="@string/tab_home" />
+
+                <RadioButton
+                    android:id="@+id/rb_map"
+                    style="@style/main_tab_bottom"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/selector_tab_map"
+                    android:text="@string/tab_map"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/rb_alarm"
+                    style="@style/main_tab_bottom"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/selector_tab_alarm"
+                    android:text="@string/tab_alarm" />
+
+                <RadioButton
+                    android:id="@+id/rb_more"
+                    style="@style/main_tab_bottom"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/selector_tab_more"
+                    android:text="@string/tab_more" />
+            </RadioGroup>
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.locationtochild.ui.widget.AnimationTabHost>

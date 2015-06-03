@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.locationtochild.ui"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.locationtochild.ui.widget.TopTitleBar
+        android:id="@+id/title_setting"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        custom:titleText="@string/setting_title"
+        custom:leftSrc="@drawable/ic_titlebar_back" />
+
+    <LinearLayout
+        android:id="@+id/setting_custom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_setting"
+        android:layout_marginTop="4dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:paddingLeft="7dp"
+            android:text="@string/setting_main_custom"
+            android:textColor="@color/theme_color"
+            android:textSize="17sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@color/device_line" />
+
+        <RelativeLayout
+            android:id="@+id/setting_gps_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:clickable="true"
+            android:background="@drawable/selector_setting_item"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/setting_gps_image"
+                android:layout_margin="7dp"
+                android:src="@drawable/location_icon2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="49dp"
+                android:text="@string/setting_main_gps"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/setting_gps_ischoose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dip"
+                android:background="@drawable/switch_bg_red"
+                android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/setting_gps_ison"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/setting_off"
+                    android:textColor="@android:color/white" />
+                <TextView
+                    android:id="@+id/setting_gps_isoff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@color/device_line" />
+
+        <RelativeLayout
+            android:id="@+id/setting_wall_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:clickable="true"
+             android:background="@drawable/selector_setting_item"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/setting_wall_image"
+                android:layout_margin="7dp"
+                android:src="@drawable/wall_icon2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="49dp"
+                android:text="@string/setting_main_wall"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/setting_wall_ischoose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dip"
+                android:background="@drawable/switch_bg_red"
+                android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/setting_wall_ison"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/setting_off"
+                    android:textColor="@android:color/white" />
+                <TextView
+                    android:id="@+id/setting_wall_isoff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@color/device_line" />
+
+        <RelativeLayout
+            android:id="@+id/setting_devicekey_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/selector_setting_item"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="7dp"
+                android:src="@drawable/key_icon2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="49dp"
+                android:text="@string/setting_main_devicekey"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/list_item_jiantou" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@color/device_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setting_telephone_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_custom_layout"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:paddingLeft="7dp"
+            android:text="@string/setting_main_telephone"
+            android:textColor="@color/theme_color"
+            android:textSize="17sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@color/device_line" />
+
+        <RelativeLayout
+            android:id="@+id/setting_teleqq_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+             android:background="@drawable/selector_setting_item"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="7dp"
+                android:src="@drawable/tele_qq" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="49dp"
+                android:text="@string/setting_main_teleqq"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/list_item_jiantou" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@color/device_line" />
+
+        <RelativeLayout
+            android:id="@+id/setting_telecenter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+             android:background="@drawable/selector_setting_item"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="7dp"
+                android:src="@drawable/telecenter_icon1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="49dp"
+                android:text="@string/setting_main_telecenter"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/list_item_jiantou" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@color/device_line" />
+
+        <RelativeLayout
+            android:id="@+id/setting_teledevice_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:clickable="true"
+            android:background="@drawable/selector_setting_item"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="7dp"
+                android:src="@drawable/teledevice_icon1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="49dp"
+                android:text="@string/setting_main_teledevice"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/list_item_jiantou" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@color/device_line" />
+    </LinearLayout>
+
+</RelativeLayout>

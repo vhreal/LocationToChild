@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="lighter_gray">#CCCCCC</color>
+    <color name="tab_gray">#ADADAD</color>
+    <color name="turquoise">#00FFFF</color>
+    <color name="light_sea_green">#3EA99F</color>
+    <color name="red">#FF0000</color>
+    <color name="dark_blue">#ff2672b2</color>
+    <color name="theme_color">#36B9AF</color>
+    <color name="device_line">#d1cfcf</color>
+    <color name="text_color">#585b5b</color>
+    <color name="black_icon">#141616</color>
+    <color name="dark_gray">#626769</color>
+    <color name="backgroud_text">#EEEED1</color>
+    <drawable name="text_bg">#EEEED1</drawable>
+    <drawable name="text_press">#caca6d</drawable>
+    <drawable name="setting_item_normal">#00000000</drawable>
+    <drawable name="setting_item_press">#98EEE7</drawable>
+    <drawable name="btn_nomal">#36B9AF</drawable>
+    <drawable name="btn_press">#539C96</drawable>
+</resources>

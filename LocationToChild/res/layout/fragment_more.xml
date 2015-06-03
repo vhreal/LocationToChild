@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.locationtochild.ui"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.locationtochild.ui.widget.TopTitleBar
+        android:id="@+id/title_more"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        custom:titleText="@string/tab_more" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_more"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/more_about_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/selector_setting_item"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:text="@string/more_about"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/list_item_jiantou" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@color/device_line" />
+
+        <RelativeLayout
+            android:id="@+id/more_help_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/selector_setting_item"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:text="@string/more_help"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/list_item_jiantou" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@color/device_line" />
+
+        <RelativeLayout
+            android:id="@+id/more_feedback_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/selector_setting_item"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:text="@string/more_feedback"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/list_item_jiantou" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@color/device_line" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+    
+    <style name="main_tab_bottom">
+        <item name="android:textSize">@dimen/bottom_tab_text_size</item>
+        <item name="android:textColor">@color/selector_tab_text</item>
+        <item name="android:drawablePadding">@dimen/bottom_tab_padding_drawable</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    
+    <!-- 时间轴上的标记点 -->
+    <style name="moment_small_dot">
+        <item name="android:paddingLeft">6.0px</item>
+        <item name="android:paddingTop">5.0px</item>
+        <item name="android:paddingRight">6.0px</item>
+        <item name="android:paddingBottom">7.0px</item>
+    </style>
+    
+     <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+    	<item name="android:windowIsFloating">true</item>
+    	<item name="android:windowContentOverlay">@null</item>
+    	<item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    	<item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+	</style>
+	
+	<style name="myProgressDialog" parent="@style/CustomDialog">
+		<item name="android:windowBackground">@android:color/transparent</item>
+    	<item name="android:windowNoTitle">true</item>
+	</style>
+
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.locationtochild.ui"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.locationtochild.ui.widget.TopTitleBar
+        android:id="@+id/title_home"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        custom:rightSrc="@drawable/ic_settings"
+        custom:titleText="@string/tab_home" />
+
+    <RelativeLayout
+        android:id="@+id/recently_location"
+        android:layout_width="fill_parent"
+        android:layout_height="150dip"
+        android:layout_below="@id/title_home"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/recent_icon"
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_location" />
+
+        <LinearLayout
+            android:id="@+id/recent_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/title_home"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/recent_icon"
+            android:orientation="vertical"
+            android:paddingLeft="4.0dip"
+            android:paddingRight="4.0dip" >
+
+            <TextView
+                android:id="@+id/recent_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/recently_location_str"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/recent_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1.0dip"
+                android:gravity="center"
+                android:text="@string/recently_time_str"
+                android:textColor="@color/tab_gray" />
+
+            <Button
+                android:id="@+id/start_location"
+                android:layout_width="wrap_content"
+                android:layout_height="36dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/selector_green_btn"
+                android:paddingBottom="6.0dip"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:paddingTop="6.0dip"
+                android:text="@string/start_location_string"
+                android:textColor="@color/white"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="6dip"
+            android:background="@color/lighter_gray" />
+
+        <ImageView
+            android:id="@+id/before_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="3.0dip"
+            android:layout_marginBottom="1.0dip"
+            android:background="@drawable/ic_location_dot"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/home_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recently_location"
+        android:layout_marginLeft="3.0dip"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
+
+</RelativeLayout>

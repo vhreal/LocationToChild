@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.locationtochild.ui"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<com.locationtochild.ui.widget.TopTitleBar
+        android:id="@+id/title_more_about"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        custom:leftSrc="@drawable/ic_titlebar_back"
+        custom:titleText="@string/more_about" />
+    
+    <LinearLayout
+        android:id="@+id/more_about_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_more_about"
+        android:layout_marginTop="64dip"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="64dip"
+            android:layout_height="64dip"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/app_name"
+            android:background="@drawable/location_icon2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dip"
+            android:text="儿童定位助手"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_horizontal"
+            android:textSize="22sp"
+            android:layout_gravity="center_horizontal"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dip"
+            android:text="4.1.2"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_horizontal"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dip"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:text="邮箱：locationtochild@163.com\n@2014****************"
+        android:textColor="@color/text_color"
+        />
+</RelativeLayout>

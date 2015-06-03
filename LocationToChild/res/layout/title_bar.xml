@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:background="@drawable/bg_actionbar"
+    android:id="@+id/top_title">
+    
+    <ImageView 
+        android:id="@+id/title_left"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_title_wrapper"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        />
+    
+    <View 
+        android:id="@+id/left_line"
+        android:layout_width="12px" 
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@id/title_left"
+        android:layout_marginLeft="2.0dip"
+        android:layout_marginRight="6.0dip"
+        android:background="@drawable/widget_line"
+        android:visibility="gone"/>
+    
+    <ImageView
+        android:id="@+id/title_right"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="4dip"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_title_wrapper"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        />
+    
+    <View 
+        android:id="@+id/right_line"
+        android:layout_width="12px" 
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@id/title_right"
+        android:layout_marginLeft="6.0dip"
+        android:layout_marginRight="2.0dip"
+        android:background="@drawable/widget_line"
+        android:visibility="gone"/>
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/tab_gray"/>
+    
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:maxWidth="200.0dip"
+        android:singleLine="true"
+        android:textSize="22.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        />
+    
+</RelativeLayout>

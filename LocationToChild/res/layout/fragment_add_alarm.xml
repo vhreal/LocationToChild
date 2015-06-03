@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.locationtochild.ui"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.locationtochild.ui.widget.TopTitleBar
+        android:id="@+id/add_alarm_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        custom:titleText="@string/setting_add_title" />
+
+    <LinearLayout
+        android:id="@+id/add_alarm_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_alarm_title"
+        android:layout_margin="7dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dip"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/alarm_icon_getup" >
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+	       	android:layout_gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/alarm_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_add_time"
+                android:textSize="29sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_add_tip"
+                android:textColor="@android:color/darker_gray" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_alarm_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_alarm_first"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:orientation="vertical" >
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginBottom="7dp"
+            android:background="@color/device_line" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/setting_add_type"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/alarm_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dip"
+                android:text="@string/setting_add_workday"
+                android:textSize="19sp"
+                android:textColor="@color/theme_color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical" >
+
+            <RadioGroup
+                android:id="@+id/alarm_type_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_weekday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:checked="true"
+                    android:textSize="17sp"
+                    android:text="@string/setting_add_workday" />
+
+                <RadioButton
+                    android:id="@+id/radio_weekend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="17sp"
+                    android:text="@string/setting_add_weekend" />
+
+                <RadioButton
+                    android:id="@+id/radio_free"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                     android:textSize="17sp"
+                    android:text="@string/setting_add_free" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginBottom="7dp"
+            android:background="@color/device_line" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/add_alarm_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_alarm_two"
+        android:layout_gravity="center"
+        android:layout_margin="7dp" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/add_alarm_mon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/check_type_day" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_add_mon"
+                    android:textSize="17sp" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/add_alarm_tus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/check_type_day" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_add_tus"
+                    android:textSize="17sp" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/add_alarm_wen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/check_type_day" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_add_wen"
+                    android:textSize="17sp" >
+                </TextView>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/add_alarm_thu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/check_type_day" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_add_thu"
+                    android:textSize="17sp" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/add_alarm_fri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/check_type_day" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_add_fri"
+                    android:textSize="17sp" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/add_alarm_sat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/check_type_day" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_add_sat"
+                    android:textSize="17sp" >
+                </TextView>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/add_alarm_sun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/check_type_day" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_add_sun"
+                    android:textSize="17sp" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout android:layout_weight="1" >
+            </LinearLayout>
+
+            <LinearLayout android:layout_weight="1" >
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+ 		>
+
+        <Button
+            android:id="@+id/add_alarm_submit"
+            android:layout_width="0dp"
+            android:layout_height="42dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_select"
+            android:textColor="@color/white"
+            android:textSize="19sp" 
+            android:text="@string/setting_add_submit"
+			/>
+
+        <TextView
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:background="@color/device_line" />
+
+        <Button
+            android:id="@+id/add_alarm_cancel"
+            android:layout_width="0dp"
+            android:layout_height="42dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_select"
+            android:textColor="@color/white"
+            android:textSize="19sp" 
+            android:text="@string/setting_add_cancel"
+            />
+         <TextView
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:background="@color/device_line" />
+
+        <Button
+            android:id="@+id/add_alarm_delete"
+            android:layout_width="0dp"
+			android:layout_height="42dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_select"
+            android:textColor="@color/white"
+            android:text="@string/setting_add_delete"
+            android:textSize="19sp" 
+       		/>
+    </LinearLayout>
+
+</RelativeLayout>

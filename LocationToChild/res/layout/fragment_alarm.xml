@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.locationtochild.ui"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <com.locationtochild.ui.widget.TopTitleBar
+       android:id="@+id/title_setting_alarm"
+       android:layout_width="fill_parent"
+       android:layout_height="50dip"
+       custom:titleText="@string/setting_alarm_title"
+       custom:rightSrc="@drawable/setting_add"
+       />
+    <ListView 
+        android:id="@+id/alarm_setting_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        ></ListView>
+    
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.locationtochild.ui"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<com.locationtochild.ui.widget.TopTitleBar
+        android:id="@+id/title_more_help"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        custom:leftSrc="@drawable/ic_titlebar_back"
+        custom:titleText="@string/more_help" />
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/title_more_help"
+	    android:orientation="vertical"
+	    >
+	    <TextView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/backgroud_text"
+	        android:textColor="@color/dark_gray"
+	        android:paddingLeft="7dip"
+	        android:textSize="17sp"
+	        android:text="问：收到“位置查询超时，请稍后再试”怎么办？"
+	        />
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	         android:textColor="@color/dark_gray"
+	        android:paddingLeft="7dip"
+	        android:paddingRight="7dip"
+	        android:textSize="17sp"
+	        android:text="答：请您将设备置于室外5~7分钟，通过主页面的“立即获取位置”来测试是否设备可以正常回复位置信息。如果仍然未解决请联系我们：locationtochild@163.com"
+	        />
+	     <TextView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/backgroud_text"
+	        android:textColor="@color/dark_gray"
+	        android:paddingLeft="7dip"
+	        android:textSize="17sp"
+	        android:text="问：为什么点击”立即获取位置“需要等待很长时间？"
+	        />
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	         android:textColor="@color/dark_gray"
+	        android:paddingLeft="7dip"
+	        android:paddingRight="7dip"
+	        android:textSize="17sp"
+	        android:text="答：在得到设备的位置之前需要通过与设备进行交互来实现"
+	        />
+	</LinearLayout>
+</RelativeLayout>

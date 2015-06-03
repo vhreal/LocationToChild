@@ -1,0 +1,73 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.locationtochild.ui"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.locationtochild.logic.LocationToChildApplication"
+        android:icon="@drawable/location_icon2"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.locationtochild.ui.MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_login" >
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_register" >
+        </activity>
+        <activity
+            android:name=".InitSettingActivity"
+            android:label="@string/title_init" >
+        </activity>
+ 		<activity
+            android:name="com.locationtochild.ui.setting.SettingActivity"
+            android:label="@string/title_setting" >
+        </activity>
+        <activity
+            android:name=".SynchronousActivity"
+            android:label="@string/title_sync" >
+        </activity>
+        <activity android:name="com.locationtochild.ui.MoreDetailActivity"
+            android:label="@string/tab_more"
+            ></activity>
+        <receiver android:name="com.locationtochild.utils.SmsSendReceiver" >
+            <intent-filter>
+                <action android:name="SMS_SEND_ACTIOIN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.locationtochild.utils.MessageParseReceiver" >
+            <intent-filter android:priority="10000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.locationtochild.utils.AlarmInitReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.locationtochild.utils.AlarmReceiver" >
+             <intent-filter>
+                <action android:name="com.locationtochild.ALARM_ALERT" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
